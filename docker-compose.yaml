@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+  schema:
+    build: .
+    depends_on:
+      - "postgres"
+    volumes:
+      - .:/app
+    env_file:
+      - config/postgres.env
+
+  postgres:
+    image: "postgres:9.5"
+    env_file:
+      - config/postgres.env
+
+  api:
+    build: .
+    depends_on:
+      - "postgres"
+    ports:
+      - 5001:5001
+    volumes:
+        - .:/app
+
+  unittest:
+    build: .
+    volumes:
+      - .:/app
+
+  functionaltest:
+    build: .
+    volumes:
+      - .:/app
+    links:
+      - "api:api"

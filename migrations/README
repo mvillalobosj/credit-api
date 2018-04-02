@@ -1,0 +1,4 @@
+Contains all migration files and settings for alembic migrations.
+
+Migration files are stored in the `versions` directory.
+Refer to: http://alembic.zzzcomputing.com/en/latest/tutorial.html for details on alembic.
