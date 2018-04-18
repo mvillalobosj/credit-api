@@ -1,5 +1,5 @@
 from datetime import datetime
-import app.lib.payment_calc as calc
+import app.utilities.payment_calc as calc
 
 import pytest
 

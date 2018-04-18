@@ -2,6 +2,10 @@ from flask import jsonify
 from werkzeug.exceptions import HTTPException
 from .config import get_config
 from .db import get_db
+from .payment_calc import(
+    get_monthly_interests,
+    make_payment,
+    make_withdrawal)
 
 
 class SC:

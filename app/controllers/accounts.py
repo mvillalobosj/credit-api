@@ -2,8 +2,8 @@ import uuid
 
 from flask import current_app
 
-from app.lib import get_monthly_interests, make_payment, make_withdrawal
-from app.utilities import APIError, SC
+from app.utilities import (
+    APIError, get_monthly_interests, make_payment, make_withdrawal, SC)
 from schema import Balance, CreditAccount, Customer, Payment, Withdrawal
 
 
